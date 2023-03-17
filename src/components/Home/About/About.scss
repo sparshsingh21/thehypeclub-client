@@ -1,0 +1,79 @@
+@import '../../../css-config/mixins.scss';
+
+.about {
+    @include md {
+        height: 100vh;
+        width: 100%;
+        background-color: black;
+        color: white;
+    }
+    .heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 30px;
+        word-spacing: 6px;
+        @include md {
+            height: 15vh;
+            width: 100%;
+        }
+    }.about-content {
+        display: flex;
+        height: 85vh;
+        justify-content: center;
+        align-items: center;
+        .about-left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            @include md {
+                width: 60%;
+                height: 100%;
+            }
+        .backimg {
+            @include md {
+                height: 90%;
+                width: 70%;
+            }
+        }
+        .frontimg {
+            @include md {
+                position: relative;
+                height: 200px;
+                width: 200px;
+                left: 100px;
+                top: 80px;
+            }
+        }
+        }
+        .about-right {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            @include md {
+                width: 40%;
+                height: 100%;
+            }
+        .border-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            @include md {
+                height: 90%;
+                width: 70%;
+                border: 2px solid white;
+            }
+            .about-textbox {
+                text-align: left;
+                h1 {
+                    font-size: 20px;
+                }
+            }
+        }
+        }
+    }
+}

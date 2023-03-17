@@ -1,0 +1,108 @@
+@import "../../css-config/mixins.scss";
+
+.main-header {
+    width: 100%;
+    padding: 0 20px;
+    z-index: 110;
+    background-color: #000000;
+    color: white;
+    border-bottom: 1px solid;
+    border-color: rgba(0, 0, 0, 0.1);
+    @include md {
+        padding: 0 40px;
+    }
+    .header-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+        flex-direction: column;
+        max-width: 1200px;
+        @include md {
+            height: 120px;
+            justify-content: space-between;
+            flex-direction: row;
+            margin: 0 auto;
+        }
+    }
+    .header-logo {
+        width: 30%; 
+        
+        cursor: pointer;
+        @include md {
+            width: 25%;
+        }
+    }
+    .left {
+        display: flex ;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 25px;
+        @include md {
+            display: flex;
+            justify-content: flex-start;
+        }
+        
+    }
+    .right {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @include md {
+            gap: 25px;
+        }
+        li {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+        svg {
+            font-size: 20px;
+            cursor: pointer;
+            @include md {
+                font-size: 24px;
+            }
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+        .cart-icon {
+            position: relative;
+            span {
+                min-width: 20px;
+                text-align: center;
+                background: orange;
+                padding: 2.5px;
+                position: absolute;
+                top: -5px;
+                right: -12px;
+                font-size: 12px;
+                line-height: 1;
+                border-radius: 10px;
+            }
+        }
+    }
+    &.sticky-header {
+        background-color: #000000;
+        color: white;
+        position: sticky;
+        top: 0;
+        transform: translateY(-60px);
+        animation: StickyHeader 0.3s ease forwards;
+    }
+}
+
+@keyframes StickyHeader {
+    0% {
+        transform: translateY(-60px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

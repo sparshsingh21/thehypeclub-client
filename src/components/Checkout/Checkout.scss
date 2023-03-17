@@ -1,0 +1,77 @@
+@import "../../css-config/mixins.scss";
+
+.checkout-page {
+    display: flex;
+    flex-direction: column;
+    @include md {
+    min-height: calc(100vh - 110px);
+    flex-direction: row;
+    width: 100%;
+    
+    }
+
+    .left {
+        width: 100%;
+        @include md{
+        width: 50%;
+        }
+        // background-color: black;
+        .checkout-table {
+            width: 100%;
+            margin-left: 50px;
+        }
+
+        .checkout-product {
+            .checkout-prod-details {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .checkout-img {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+    }
+    .details {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            font-size: 24px;
+        }
+        .checkout-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            width: 100%;
+            input {
+                // background-color: gray;
+                border: 1px solid black;
+            }
+            .long-field {
+                display: flex;
+                width: 100%;
+                gap: 10px;
+                input {
+                    width: 80%;
+                }
+            }
+            .field-cont {
+                display: flex;
+                gap: 30px;
+                width: 100%;
+            }
+            .field {
+                display: flex;
+                gap: 10px;
+            }
+        }
+    }
+
+
+}

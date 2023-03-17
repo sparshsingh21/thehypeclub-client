@@ -1,0 +1,40 @@
+@import "../../css-config/mixins.scss";
+.footer {
+    width: 100%;
+    .bottom-bar {
+        background-color: black;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        .bottom-bar-content {
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+            @include md {
+                padding: 0;
+                height: 60px;
+                max-width: 1200px;
+                margin: 0 auto;
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+            .text {
+                font-size: 14px;
+            }
+            .policy {
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                @include md {
+                    width: 30%;
+                }
+            p {
+                cursor: pointer;
+            }
+            }
+        }
+    }
+}

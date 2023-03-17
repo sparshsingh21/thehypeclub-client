@@ -1,0 +1,42 @@
+@import '../../../css-config/mixins.scss';
+
+.gallery {
+    height: 120vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    .sneak {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 110px;
+        word-spacing: 30px;
+        line-height: 1;
+        color: white;
+        font-weight: bolder;
+        height: 40%;
+        width: 100%;
+        background-color: rgb(220, 218, 218);
+    }
+    .gallery-down {
+        height: 60%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: black;
+        .box {
+            background-color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50%;
+            width: 20%;
+            &:nth-child(odd){
+                position: relative;
+                bottom: 80px;
+            }
+        }
+    }
+}
